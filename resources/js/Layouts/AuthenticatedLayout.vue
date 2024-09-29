@@ -18,7 +18,7 @@ const showingNavigationDropdown = ref(false);
              <Link href="/">
                  <ApplicationLogo class="block h-9 w-auto fill-current text-gray-800"/>
              </Link>
-             Lara Storage
+             Personal Storage
          </div>
          <div class="hidden lg:flex">
              <SearchForm/>
@@ -26,15 +26,15 @@ const showingNavigationDropdown = ref(false);
              <UserSettingsDropdown/>
      </div>
     <div>
-        <main class="flex flex-col lg:flex-row flex-1 px-4 overflow-hidden mt-5 md:mt-0">
-            <div class="hidden lg:flex">
+        <main class="flex flex-col md:flex-row flex-1 px-4 overflow-hidden mt-5 md:mt-0">
+            <div class="hidden md:flex">
                 <Navigation/>
             </div>
 
             <div class="flex-1 flex flex-col overflow-hidden">
                 <slot/>
             </div>
-            <div class="bottom-0 left-0 absolute flex">
+            <div class="fixed bottom-0 left-0 w-full lg:hidden mb-2">
                 <MobileNav/>
             </div>
         </main>
