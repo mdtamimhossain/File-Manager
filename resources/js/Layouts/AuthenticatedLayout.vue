@@ -12,14 +12,15 @@ const showingNavigationDropdown = ref(false);
 
 <template>
 
-  <div class="h-screen bg-gray-50 w-full md:gap-4">
+  <div class="h-screen bg-gray-50 w-full md:gap-4 md:px-[10vw]">
      <div class="flex flex justify-between items-center pr-2 lg:pr-0">
-         <div class="h-[80px] flex items-center gap-3 px-4">
-             <Link href="/">
+
+             <Link :href="route('myFiles')" class="h-[80px] flex items-center gap-3 px-4">
                  <ApplicationLogo class="block h-9 w-auto fill-current text-gray-800"/>
+                 Personal Storage
              </Link>
-             Personal Storage
-         </div>
+
+
          <div class="hidden lg:flex">
              <SearchForm/>
          </div>
@@ -31,7 +32,7 @@ const showingNavigationDropdown = ref(false);
                 <Navigation/>
             </div>
 
-            <div class="flex-1 flex flex-col overflow-hidden">
+            <div class="flex-1 flex flex-col overflow-hidden -3 ml-[5vw] bg-white">
                 <slot/>
             </div>
             <div class="fixed bottom-0 left-0 w-full lg:hidden mb-2">

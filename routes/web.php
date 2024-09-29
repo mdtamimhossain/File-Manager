@@ -13,6 +13,10 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+Route::controller(\App\Http\Controllers\FileController::class)
+    ->middleware(['auth','verified'])->group(function (){
+        Route::get('/my-files','MyFiles')->name('myFiles');
+    });
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
