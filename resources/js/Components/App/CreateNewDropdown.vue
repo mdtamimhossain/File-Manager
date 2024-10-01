@@ -20,21 +20,23 @@
             <MenuItems
                 class="absolute md:left-0 bottom-full mb-2 md:top-full md:mt-2 w-40 origin-bottom-right md:origin-top-right divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black/5 focus:outline-none"
             >
-                <div class="px-5 py-1 bg-white ">
+                <div class="px-5 py-1 bg-white  hover:bg-gray-50 ">
                     <MenuItem>
-                        <a class="block text-gray-800 px-2 py-3 text-sm">
+                        <a class="block text-gray-800 font-semibold px-2 py-3 text-sm cursor-pointer">
                             New Folder
                         </a>
                     </MenuItem>
                 </div>
-                <div class="px-5 py-1 bg-white">
+                <div class="px-5 py-1 bg-white  hover:bg-gray-50">
                     <MenuItem>
-                        <a class="block text-gray-800 px-2 py-3 text-sm">
+                        <a class="block text-gray-800 font-semibold px-2 py-3 text-sm cursor-pointer">
                             New File
                         </a>
                     </MenuItem>
+                </div>
+                <div class="px-5 py-1 bg-white  hover:bg-gray-50">
                     <MenuItem>
-                        <a class="block text-gray-800 px-2 py-3 text-sm">
+                        <a class="block text-gray-800 font-semibold  px-2 py-3 text-sm cursor-pointer">
                             New Upload
                         </a>
                     </MenuItem>
