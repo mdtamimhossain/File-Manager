@@ -22,7 +22,7 @@
             >
                 <div class="px-5 py-1 bg-white  hover:bg-gray-50 ">
                     <MenuItem>
-                        <a class="block text-gray-800 font-semibold px-2 py-3 text-sm cursor-pointer">
+                        <a href="#" @click.prevent="showCreateFolderModel" class="block text-gray-800 font-semibold px-2 py-3 text-sm cursor-pointer">
                             New Folder
                         </a>
                     </MenuItem>
@@ -44,8 +44,17 @@
             </MenuItems>
         </transition>
     </Menu>
+    <create-folder-modal v-model="createFolderModal" ></create-folder-modal>
 </template>
 
 <script setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
+import CreateFolderModal from "@/Components/App/CreateFolderModal.vue";
+import {ref} from "vue";
+
+const createFolderModal=ref(false)
+
+const showCreateFolderModel=()=>{
+    createFolderModal.value=true
+}
 </script>
